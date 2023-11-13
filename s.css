@@ -1,0 +1,40 @@
+body{
+   display: flex;
+   text-align: center;
+   justify-content: center;
+   font-family: Arial, Helvetica, sans-serif;
+   height: 100vh;
+   background-color: seashell;
+}
+.container{
+    text-align: center;
+}
+.board{
+    display: grid;
+    grid-template-columns: repeat(3,100px);
+    grid-gap: 5px;
+}
+.cell{
+    background-color: #ddd;
+    display: flex;
+    width: 100px;
+   height: 100px;
+   border: 1px solid blueviolet;
+   align-items: center;
+   font-size: 24px;
+   padding-left: 30px;
+   cursor: pointer;
+}
+.cell:hover{
+ background-color: #eee;
+}
+button{
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+#status{
+    font-size: large;
+    font-size: 24px;
+    color:blue;
+}
