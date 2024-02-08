@@ -9,7 +9,11 @@
 <body>
     <div class="container">
         <h1 style="color:chocolate">Tic-Tac-Toe Game</h1>
-        <div id="board" class="board">
+        <div class="vs-button">
+            <button id="twoPlayers">2 Players</button>
+            <button id="vsComputer">vs Computer</button>
+        </div>
+        <div id="board" class="board" style="display: none;">
             <div class="cell" onclick="handleclick(0)"></div>
             <div class="cell" onclick="handleclick(1)"></div>
             <div class="cell" onclick="handleclick(2)"></div>
@@ -19,9 +23,30 @@
             <div class="cell" onclick="handleclick(6)"></div>
             <div class="cell" onclick="handleclick(7)"></div>
             <div class="cell" onclick="handleclick(8)"></div>
-        </div>
         <p id="status">The First Player is X!</p>
-        <button id="reset" onclick="reset()">RESET</button>
+        </div>
+        <div class="game-section vs-computer" style="display: none;">
+            <small>Player 1 = X || Computer = O</small>
+            <div class="game-board">
+                <div class="row">
+                    <div class="cell" onclick="vsComMakeMove(0, 0)"></div>
+                    <div class="cell" onclick="vsComMakeMove(0, 1)"></div>
+                    <div class="cell" onclick="vsComMakeMove(0, 2)"></div>
+                </div>
+                <div class="row">
+                    <div class="cell" onclick="vsComMakeMove(1, 0)"></div>
+                    <div class="cell" onclick="vsComMakeMove(1, 1)"></div>
+                    <div class="cell" onclick="vsComMakeMove(1, 2)"></div>
+                </div>
+                <div class="row">
+                    <div class="cell" onclick="vsComMakeMove(2, 0)"></div>
+                    <div class="cell" onclick="vsComMakeMove(2, 1)"></div>
+                    <div class="cell" onclick="vsComMakeMove(2, 2)"></div>
+                </div>
+            </div>
+            <p class="winner-text" id="vsComputerWinnerText"></p>
+        </div>
+        <button id="restart"   style="display: none;">RESTART</button>
     </div>
     <script src="js.js"></script>
 </body>
