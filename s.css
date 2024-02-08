@@ -9,6 +9,23 @@ body{
 .container{
     text-align: center;
 }
+.game-board {
+    display: inline-block;
+    margin: 20px;   
+}
+
+.game-section {
+    text-align: center;
+}
+
+.row {
+    display: flex;
+}
+
+.winner-text {
+    font-size: 24px;
+    margin: 20px 0;
+}
 .board{
     display: grid;
     grid-template-columns: repeat(3,100px);
